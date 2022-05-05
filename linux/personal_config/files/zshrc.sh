@@ -32,11 +32,9 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Alias
-alias lsa="ls -la"
-alias ht="sudo htop"
-alias da="deactivate"
-alias rm="rm -rf"
-alias gcom="git checkout master"
+alias ll="ls -lah"
+alias k="clear && kubectl"
+alias ka="clear && kubectl get all,ing -o wide"
 
 # Snappy escape
 export KEYTIMEOUT=1
