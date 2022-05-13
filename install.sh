@@ -13,6 +13,9 @@ ln -sf ${BASEDIR}/linux/personal_config/files/zshrc.sh ${HOME}/.zshrc
 ln -sf ${BASEDIR}/linux/personal_config/files/bashrc.sh ${HOME}/.bashrc
 chmod +x ${HOME}/.bashrc
 
+curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+echo 'source ~/.git-prompt.sh' >> ~/.bashrc
+
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git --branch 0.29.0 ~/.fzf
 ~/.fzf/install --all --no-bash
