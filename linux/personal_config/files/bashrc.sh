@@ -1,6 +1,7 @@
 alias ll='ls $LS_OPTIONS -lah'
 alias dum="du -h --max-depth=1"
 alias k="kubectl"
+alias ka='clear && kubectl get all,ing -o wide'
 
 export PS1="\[\033[38;5;20m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;1m\]\\$>\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
