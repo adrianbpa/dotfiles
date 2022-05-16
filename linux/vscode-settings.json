@@ -6,5 +6,11 @@
     "activityBar.background": "#81630e",
     "titleBar.activeBackground": "#997510",
     "titleBar.activeForeground": "#F6FBFB"
-  }
+  },
+  "recommendations": [
+    "kaleidoscope-app.vscode-ksdiff",
+    "ms-vscode-remote.remote-containers",
+    "mhutchie.git-graph",
+    "ms-azuretools.vscode-docker"
+  ]
 }
