@@ -38,7 +38,7 @@ function be_get_branch {
 
 ## Add branch to PS1 (based on $PS1 or $1), formatted as $2
 export GIT_PS1_SHOWDIRTYSTATE=yes
-export PS1="\$(be_get_branch "$2")${PS1}";
+#export PS1="\$(be_get_branch "$2")${PS1}";
 
 # Faster (1ms vs 5ms) than /usr/bin/dirname
 function dirname() {
