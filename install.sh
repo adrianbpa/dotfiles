@@ -13,6 +13,9 @@ ln -sf ${BASEDIR}/linux/personal_config/files/zshrc.sh ${HOME}/.zshrc
 ln -sf ${BASEDIR}/linux/personal_config/files/bashrc.sh ${HOME}/.bashrc
 chmod +x ${HOME}/.bashrc
 
+mkdir ~/.local_path
+cp -a ${BASEDIR}/linux/LOCAL_PATH/* ~/.local_path
+
 curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 echo 'source ~/.git-prompt.sh' >> ~/.bashrc
 
@@ -31,3 +34,4 @@ git config --global push.default current
 apt update -y
 apt install nano -y
 apt install -y bash-completion
+apt install -y redis-tools

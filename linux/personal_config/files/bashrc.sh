@@ -46,3 +46,5 @@ function dirname() {
   "${dir:=./}" != "/" && dir="${dir%?}"
   echo "$dir"
 }
+
+PATH=$PATH:~/.local_path
