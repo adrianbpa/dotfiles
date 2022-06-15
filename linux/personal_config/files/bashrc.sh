@@ -1,7 +1,11 @@
 alias ll='ls $LS_OPTIONS -lah'
 alias dum="du -h --max-depth=1"
-alias k="kubectl"
-alias ka='clear && kubectl get all,ing -o wide'
+alias ksandbox="kubectl --context arn:aws:eks:us-west-2:580663733917:cluster/anomalo-staging --namespace sandbox-a6h9"
+alias kdemo="kubectl --context arn:aws:eks:us-west-2:580663733917:cluster/anomalo-staging --namespace demo"
+alias kstaging="kubectl --context arn:aws:eks:us-west-1:580663733917:cluster/anomalo-staging-us-west-1 --namespace staging-5fa9"
+alias k="ksandbox"
+alias ksandbox_all='clear && ksandbox get all,ing -o wide'
+alias kstaging_all='clear && kstaging get all,ing -o wide'
 
 export PS1="\[\033[38;5;20m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;1m\]\\$>\[$(tput sgr0)\] \[$(tput sgr0)\]"
 

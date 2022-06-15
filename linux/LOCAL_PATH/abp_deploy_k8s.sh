@@ -8,5 +8,5 @@ echo -e "Generating k8s YAML..."
 echo -e "Using temporary Docker image from AWS ECR instead of prod image from GCR..."
 sed -i 's/us-docker.pkg.dev\/anomalo-invpc\/anomalo-sandbox\/deploy-web:anomalo-sandbox/580663733917.dkr.ecr.us-west-1.amazonaws.com\/dquality\/deploy-web:anomalo-sandbox/' anomalo.yaml
 echo -e "Kubectl Applying k8s resources..."
-kubectl apply -f anomalo.yaml
+kubectl --context arn:aws:eks:us-west-2:580663733917:cluster/anomalo-staging --namespace sandbox-a6h9 apply -f anomalo.yaml
 popd
