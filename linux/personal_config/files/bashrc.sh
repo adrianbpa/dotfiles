@@ -5,6 +5,7 @@ alias kdemo="kubectl --context arn:aws:eks:us-west-2:580663733917:cluster/anomal
 alias kstaging="kubectl --context arn:aws:eks:us-west-1:580663733917:cluster/anomalo-staging-us-west-1 --namespace staging-5fa9"
 alias k="ksandbox"
 alias ksandbox_all='clear && ksandbox get all,ing -o wide'
+alias ksandbox_setcontext="kubectl config set-context arn:aws:eks:us-west-2:580663733917:cluster/anomalo-staging --namespace=sandbox-a6h9"
 alias kstaging_all='clear && kstaging get all,ing -o wide'
 
 export PS1="\[\033[38;5;20m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;1m\]\\$>\[$(tput sgr0)\] \[$(tput sgr0)\]"
@@ -52,3 +53,8 @@ function dirname() {
 }
 
 PATH=$PATH:~/.local_path
+
+aws eks update-kubeconfig --region us-west-2 --name anomalo-staging
+aws eks update-kubeconfig --region us-west-1 --name anomalo-staging-us-west-1
+aws eks update-kubeconfig --region us-west-1 --name anomalo-production-us-west-1
+ksandbox_setcontext
