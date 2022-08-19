@@ -57,6 +57,6 @@ function dirname() {
 PATH=$PATH:~/.local_path
 
 aws eks update-kubeconfig --region us-west-2 --name anomalo-staging
-aws eks update-kubeconfig --region us-west-1 --name anomalo-staging-us-west-1
-aws eks update-kubeconfig --region us-west-1 --name anomalo-production-us-west-1
+#aws eks update-kubeconfig --region us-west-1 --name anomalo-staging-us-west-1
+#aws eks update-kubeconfig --region us-west-1 --name anomalo-production-us-west-1
 ksandbox_setcontext
