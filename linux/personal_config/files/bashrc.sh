@@ -60,3 +60,5 @@ aws eks update-kubeconfig --region us-west-2 --name anomalo-staging
 #aws eks update-kubeconfig --region us-west-1 --name anomalo-staging-us-west-1
 #aws eks update-kubeconfig --region us-west-1 --name anomalo-production-us-west-1
 ksandbox_setcontext
+
+source /usr/share/bash-completion/completions/git
