@@ -13,7 +13,7 @@ chflags nohidden ~/Library
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.1
 # Automatically hide and show the dock
-defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool false
 # Make hidden applications semi-transparent on the dock
 defaults write com.apple.dock showhidden -bool true
 
@@ -43,7 +43,7 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ##
 ## com.apple.sound
 ##
-#Disable sound effect when changing volume 
+# Disable sound effect when changing volume 
 defaults write -g com.apple.sound.beep.feedback -integer 0
 
 ##
@@ -73,8 +73,3 @@ killall Dock
 
 # Reset finder
 killall Finder
-
-
-#Add Sublime Text CLI
-
-#sudo mkdir -p "/usr/local/bin/" && ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "/usr/local/bin/sb"
