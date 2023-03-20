@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 echo -e "RUNNING: On Startup for ALL USERS, LINUX"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
@@ -10,7 +12,7 @@ echo "Repo root: $DOTFILES_REPO_ROOT"
 
 pushd $DOTFILES_REPO_ROOT
 
-$DOTFILES_REPO_ROOT/all_users/on_
+$DOTFILES_REPO_ROOT/all_users/on_user_login.sh
 
 git pull origin master
 
