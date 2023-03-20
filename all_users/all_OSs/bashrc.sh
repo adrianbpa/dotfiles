@@ -1,3 +1,5 @@
+# BASHRC FOR ALL USERS, ALL OSs
+
 alias ll='ls $LS_OPTIONS -lah'
 
 # Term color

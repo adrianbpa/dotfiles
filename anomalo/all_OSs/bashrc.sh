@@ -1,3 +1,5 @@
+# BASHRC FOR ANOMALO, ALL OSs
+
 alias kcluster_demosandbox="kubectl --context arn:aws:eks:us-west-2:580663733917:cluster/anomalo-staging"
 alias ksandbox="kcluster_demosandbox --namespace sandbox-a6h9"
 alias kdemo="kcluster_demosandbox --namespace demo"
