@@ -9,3 +9,5 @@ alias k="ksandbox"
 alias ksandbox_all='clear && ksandbox get all,ing -o wide'
 alias ksandbox_setcontext="kubectl config set-context arn:aws:eks:us-west-2:580663733917:cluster/anomalo-staging --namespace=sandbox-a6h9"
 alias kstaging_all='clear && kstaging get all,ing -o wide'
+
+chsh --shell /bin/bash
