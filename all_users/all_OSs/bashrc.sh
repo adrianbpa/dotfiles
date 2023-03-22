@@ -17,3 +17,5 @@ export LANG='en_US.UTF-8'
 export LESS='-F -g -i -M -R -S -w -X -z-4'
 
 export PS1="\[\033[38;5;20m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;1m\]\\$>\[$(tput sgr0)\] \[$(tput sgr0)\]"
+
+alias aws_whoami="get-caller-identity"
