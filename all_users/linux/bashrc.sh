@@ -110,4 +110,7 @@ fi
 export DOTNET_ROOT=/opt/dotnet-7.0
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
+curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+echo 'source ~/.git-prompt.sh' >> ~/.bashrc
+
 alias dum="du -h --max-depth=1"
