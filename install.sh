@@ -37,4 +37,7 @@ mkdir ~/.local_path || echo "~/.local_path already exists"
 cp -a $DOTFILES_REPO_ROOT/anomalo/all_OSs/LOCAL_PATH/* ~/.local_path
 chmod +x ~/.local_path/*
 
+/workspaces/dquality/pipw sync
+pip install poetry
+
 popd
