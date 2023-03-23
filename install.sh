@@ -6,11 +6,10 @@ set -euo pipefail
 
 echo -e "Setting up dotfiles in GitHub Codespaces..."
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-DOTFILES_REPO_ROOT=$(realpath $SCRIPT_DIR/../../../)
+DOTFILES_REPO_ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+CODESPACES_REPO_ROOT="/workspaces/dquality"
 
-echo "Script dir: $SCRIPT_DIR"
-echo "Repo root: $DOTFILES_REPO_ROOT"
+echo "Dotfiles repo root: $DOTFILES_REPO_ROOT"
 
 pushd $DOTFILES_REPO_ROOT
 
@@ -39,7 +38,7 @@ mkdir ~/.local_path || echo "~/.local_path already exists"
 cp -a $DOTFILES_REPO_ROOT/anomalo/all_OSs/LOCAL_PATH/* ~/.local_path
 chmod +x ~/.local_path/*
 
-/workspaces/dquality/pipw sync
+$CODESPACES_REPO_ROOT/pipw sync
 pip install poetry
 
 popd
