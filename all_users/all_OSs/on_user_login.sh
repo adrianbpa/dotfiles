@@ -11,6 +11,6 @@ pushd $DOTFILES_REPO_ROOT
 
 [[ -d ".git" ]] && git pull origin main
 
-code --install-extension mhutchie.git-graph
+code --install-extension mhutchie.git-graph || echo "VS Code not installed"
 
 popd
