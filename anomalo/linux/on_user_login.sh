@@ -30,8 +30,10 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 git config --global pull.rebase true
 git config --global push.default current
 
-mkdir ~/.local_path || echo "~/.local_path already exists"
-cp -a $DOTFILES_REPO_ROOT/anomalo/all_OSs/LOCAL_PATH/* ~/.local_path
-chmod +x ~/.local_path/*
+# Setup custom scripts
+PATH_CUSTOM_SCRIPTS="$HOME/.local_path"
+[[ ! -d "$PATH_CUSTOM_SCRIPTS" ]] && mkdir "$PATH_CUSTOM_SCRIPTS"
+cp -a $DOTFILES_REPO_ROOT/anomalo/all_OSs/LOCAL_PATH/* "$PATH_CUSTOM_SCRIPTS"
+chmod +x "$PATH_CUSTOM_SCRIPTS"/*
 
 popd
