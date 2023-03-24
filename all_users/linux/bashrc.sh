@@ -105,10 +105,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+PATH_K9S=/opt/k9s-0.27.3
+[[ ! -d "$PATH_K9S" ]] && echo "ERROR: Missing k9s binary in ${PATH_K9S}"
 
 # Install dotnet on arm64: https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual?source=recommendations
 export DOTNET_ROOT=/opt/dotnet-7.0
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH_K9S
 
 curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 echo 'source ~/.git-prompt.sh' >> ~/.bashrc
