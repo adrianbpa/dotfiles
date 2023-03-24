@@ -105,12 +105,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH_K9S=/opt/k9s-0.27.3
-[[ ! -d "$PATH_K9S" ]] && echo "ERROR: Missing k9s binary in ${PATH_K9S}"
+export PATH_K9S=/opt/k9s-0.27.3
+[[ ! -d "$PATH_K9S" ]] && echo "ERROR: Missing k9s in ${PATH_K9S} - Please install from https://github.com/derailed/k9s/releases"
+export PATH=$PATH:$PATH_K9S
 
-# Install dotnet on arm64: https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual?source=recommendations
+export PATH_DBEAVER="/opt/dbeaver"
+[[ ! -d "$PATH_DBEAVER" ]] && echo "ERROR: Missing DBeaver in ${PATH_DBEAVER} - Please install from https://dbeaver.io/download/"
+export PATH=$PATH:$PATH_DBEAVER
+
 export DOTNET_ROOT=/opt/dotnet-7.0
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH_K9S
+[[ ! -d "$DOTNET_ROOT" ]] && echo "ERROR: Missing .NET in ${DOTNET_ROOT} - Please install from https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual?source=recommendations"
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 echo 'source ~/.git-prompt.sh' >> ~/.bashrc
