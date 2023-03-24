@@ -38,6 +38,9 @@ mkdir ~/.local_path || echo "~/.local_path already exists"
 cp -a $DOTFILES_REPO_ROOT/anomalo/all_OSs/LOCAL_PATH/* ~/.local_path
 chmod +x ~/.local_path/*
 
+apt update
+apt install -y iputils-ping dnsutils || echo "Error while installing Debian packages"
+
 $CODESPACES_REPO_ROOT/pipw sync
 pip install poetry
 
