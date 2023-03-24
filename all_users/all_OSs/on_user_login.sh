@@ -3,7 +3,7 @@
 set -euo pipefail
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-DOTFILES_REPO_ROOT=$(realpath $SCRIPT_DIR/../../../)
+DOTFILES_REPO_ROOT=$(realpath $SCRIPT_DIR/../../)
 
 echo -e "RUNNING: On Startup for ALL USERS, ALL OSs"
 
