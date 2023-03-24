@@ -29,4 +29,6 @@ apt install -y iputils-ping dnsutils nano || echo "Error while installing Debian
 $CODESPACES_REPO_ROOT/pipw sync
 pip install poetry
 
+chsh --shell /bin/bash
+
 popd

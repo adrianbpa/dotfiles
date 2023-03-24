@@ -21,5 +21,3 @@ alias kdev_sandbox_all='clear && kdev_sandbox get all,ing -o wide'
 alias kstaging_all='clear && kstaging get all,ing -o wide'
 
 git config --global user.email 104385186+adrianbpa@users.noreply.github.com
-
-chsh --shell /bin/bash
