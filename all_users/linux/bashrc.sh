@@ -117,7 +117,6 @@ export DOTNET_ROOT=/opt/dotnet-7.0
 [[ ! -d "$DOTNET_ROOT" ]] && echo "ERROR: Missing .NET in ${DOTNET_ROOT} - Please install from https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual?source=recommendations"
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
-curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-echo 'source ~/.git-prompt.sh' >> ~/.bashrc
+source ~/.git-prompt.sh
 
 alias dum="du -h --max-depth=1"

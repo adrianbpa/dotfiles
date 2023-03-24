@@ -14,4 +14,6 @@ pushd $DOTFILES_REPO_ROOT
 code --install-extension mhutchie.git-graph || echo "VS Code not installed"
 code --install-extension shakram02.bash-beautify || echo "VS Code not installed"
 
+curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
 popd
