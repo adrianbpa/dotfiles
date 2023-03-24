@@ -12,5 +12,6 @@ pushd $DOTFILES_REPO_ROOT
 [[ -d ".git" ]] && git pull origin main
 
 code --install-extension mhutchie.git-graph || echo "VS Code not installed"
+code --install-extension shakram02.bash-beautify || echo "VS Code not installed"
 
 popd
