@@ -9,7 +9,7 @@ echo -e "RUNNING: On Startup for ALL USERS, ALL OSs"
 
 pushd $DOTFILES_REPO_ROOT
 
-[[ -d ".git" ]] && git pull origin main
+[[ -d ".git" ]] && git pull origin main || echo "Error while git-pulling dotfiles."
 
 code --install-extension mhutchie.git-graph || echo "VS Code not installed"
 code --install-extension shakram02.bash-beautify || echo "VS Code not installed"
