@@ -113,11 +113,11 @@ export PATH_DBEAVER="/opt/dbeaver"
 [[ ! -d "$PATH_DBEAVER" ]] && echo "ERROR: Missing DBeaver in ${PATH_DBEAVER} - Please install from https://dbeaver.io/download/"
 export PATH=$PATH:$PATH_DBEAVER
 
-export PATH_RIDER="/opt/JetBrains Rider-2022.3.2"
+export PATH_RIDER="/opt/JetBrainsRider-2022.3.2/bin"
 [[ ! -d "$PATH_RIDER" ]] && echo "ERROR: Missing JetBrains Rider in ${PATH_RIDER} - Please install from https://www.jetbrains.com/rider/download/download-thanks.html?platform=linuxARM64"
 export PATH=$PATH:$PATH_RIDER
 
-export DOTNET_ROOT=/opt/dotnet-7.0
+export DOTNET_ROOT="/opt/dotnet-7.0"
 [[ ! -d "$DOTNET_ROOT" ]] && echo "ERROR: Missing .NET in ${DOTNET_ROOT} - Please install from https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual?source=recommendations"
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
