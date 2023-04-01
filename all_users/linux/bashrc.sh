@@ -114,7 +114,7 @@ export PATH_DBEAVER="/opt/dbeaver"
 export PATH=$PATH:$PATH_DBEAVER
 
 export PATH_RIDER="/opt/JetBrainsRider-2022.3.2/bin"
-[[ ! -d "$PATH_RIDER" ]] && echo "ERROR: Missing JetBrains Rider in ${PATH_RIDER} - Please install from https://www.jetbrains.com/rider/download/download-thanks.html?platform=linuxARM64"
+[[ ! -d "$PATH_RIDER" ]] && echo "ERROR: Missing JetBrains Rider in ${PATH_RIDER} - Please install from https://www.jetbrains.com/rider/download/"
 export PATH=$PATH:$PATH_RIDER
 
 export PATH_JB_GW="/opt/JetBrainsGateway-231.8109.187/bin"
