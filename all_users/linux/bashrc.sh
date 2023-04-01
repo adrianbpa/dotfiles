@@ -117,6 +117,10 @@ export PATH_RIDER="/opt/JetBrainsRider-2022.3.2/bin"
 [[ ! -d "$PATH_RIDER" ]] && echo "ERROR: Missing JetBrains Rider in ${PATH_RIDER} - Please install from https://www.jetbrains.com/rider/download/download-thanks.html?platform=linuxARM64"
 export PATH=$PATH:$PATH_RIDER
 
+export PATH_JB_GW="/opt/JetBrainsGateway-231.8109.187/bin"
+[[ ! -d "$PATH_JB_GW" ]] && echo "ERROR: Missing JetBrains Gateway in ${PATH_RIDER} - Please install from https://www.jetbrains.com/remote-development/gateway/"
+export PATH=$PATH:$PATH_JB_GW
+
 export DOTNET_ROOT="/opt/dotnet-7.0"
 [[ ! -d "$DOTNET_ROOT" ]] && echo "ERROR: Missing .NET in ${DOTNET_ROOT} - Please install from https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual?source=recommendations"
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
