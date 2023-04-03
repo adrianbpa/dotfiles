@@ -19,3 +19,7 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 export PS1="\[\033[38;5;20m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;1m\]\\$>\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
 alias aws_whoami="aws sts get-caller-identity"
+
+export DOTFILES_REPO_ROOT="$(realpath ~/.adrianbpa.dotfiles)"
+
+source "${DOTFILES_REPO_ROOT}/all_users/all_OSs/git-completion.bash"
