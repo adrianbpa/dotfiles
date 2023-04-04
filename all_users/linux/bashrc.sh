@@ -105,25 +105,29 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH_K9S=/opt/k9s-0.27.3
-[[ ! -d "$PATH_K9S" ]] && echo "ERROR: Missing k9s in ${PATH_K9S} - Please install from https://github.com/derailed/k9s/releases"
-export PATH=$PATH:$PATH_K9S
+if [[ "${CODESPACES:""}" != "true" ]]; then
+    if [[ ! $(command -v k9s) ]]; then
+        export PATH_K9S=/opt/k9s-0.27.3
+        [[ ! -d "$PATH_K9S" ]] && echo "ERROR: Missing k9s in ${PATH_K9S} - Please install from https://github.com/derailed/k9s/releases"
+        export PATH=$PATH:$PATH_K9S
+    else
 
-export PATH_DBEAVER="/opt/dbeaver"
-[[ ! -d "$PATH_DBEAVER" ]] && echo "ERROR: Missing DBeaver in ${PATH_DBEAVER} - Please install from https://dbeaver.io/download/"
-export PATH=$PATH:$PATH_DBEAVER
+    export PATH_DBEAVER="/opt/dbeaver"
+    [[ ! -d "$PATH_DBEAVER" ]] && echo "ERROR: Missing DBeaver in ${PATH_DBEAVER} - Please install from https://dbeaver.io/download/"
+    export PATH=$PATH:$PATH_DBEAVER
 
-export PATH_RIDER="/opt/JetBrainsRider-2022.3.2/bin"
-[[ ! -d "$PATH_RIDER" ]] && echo "ERROR: Missing JetBrains Rider in ${PATH_RIDER} - Please install from https://www.jetbrains.com/rider/download/"
-export PATH=$PATH:$PATH_RIDER
+    export PATH_RIDER="/opt/JetBrainsRider-2022.3.2/bin"
+    [[ ! -d "$PATH_RIDER" ]] && echo "ERROR: Missing JetBrains Rider in ${PATH_RIDER} - Please install from https://www.jetbrains.com/rider/download/"
+    export PATH=$PATH:$PATH_RIDER
 
-export PATH_JB_GW="/opt/JetBrainsGateway-231.8109.187/bin"
-[[ ! -d "$PATH_JB_GW" ]] && echo "ERROR: Missing JetBrains Gateway in ${PATH_RIDER} - Please install from https://www.jetbrains.com/remote-development/gateway/"
-export PATH=$PATH:$PATH_JB_GW
+    export PATH_JB_GW="/opt/JetBrainsGateway-231.8109.187/bin"
+    [[ ! -d "$PATH_JB_GW" ]] && echo "ERROR: Missing JetBrains Gateway in ${PATH_RIDER} - Please install from https://www.jetbrains.com/remote-development/gateway/"
+    export PATH=$PATH:$PATH_JB_GW
 
-export DOTNET_ROOT="/opt/dotnet-7.0"
-[[ ! -d "$DOTNET_ROOT" ]] && echo "ERROR: Missing .NET in ${DOTNET_ROOT} - Please install from https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual?source=recommendations"
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+    export DOTNET_ROOT="/opt/dotnet-7.0"
+    [[ ! -d "$DOTNET_ROOT" ]] && echo "ERROR: Missing .NET in ${DOTNET_ROOT} - Please install from https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual?source=recommendations"
+    export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+fi
 
 source ~/.git-prompt.sh
 
