@@ -105,12 +105,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [[ "${CODESPACES:""}" != "true" ]]; then
+if [[ "${CODESPACES:-""}" != "true" ]]; then
     if [[ ! $(command -v k9s) ]]; then
         export PATH_K9S=/opt/k9s-0.27.3
         [[ ! -d "$PATH_K9S" ]] && echo "ERROR: Missing k9s in ${PATH_K9S} - Please install from https://github.com/derailed/k9s/releases"
         export PATH=$PATH:$PATH_K9S
-    else
+    fi
 
     export PATH_DBEAVER="/opt/dbeaver"
     [[ ! -d "$PATH_DBEAVER" ]] && echo "ERROR: Missing DBeaver in ${PATH_DBEAVER} - Please install from https://dbeaver.io/download/"
