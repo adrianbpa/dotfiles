@@ -20,6 +20,7 @@ export PS1="\[\033[38;5;20m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;1m\]
 
 alias aws_whoami="aws sts get-caller-identity"
 
-export DOTFILES_REPO_ROOT="$(realpath ~/.adrianbpa.dotfiles)"
+export DOTFILES_REPO_ROOT="/workspaces/.codespaces/.persistedshare/dotfiles"
+[[ ! -d "${DOTFILES_REPO_ROOT}" ]] && export DOTFILES_REPO_ROOT="$(realpath ~/.adrianbpa.dotfiles)"
 
 source "${DOTFILES_REPO_ROOT}/all_users/all_OSs/git-completion.bash"
