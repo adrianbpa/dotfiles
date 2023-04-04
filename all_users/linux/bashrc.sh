@@ -105,6 +105,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# SETUP REQUIRED SOFTWARE IN LINUX (except GitHub Codespaces)
 if [[ "${CODESPACES:-""}" != "true" ]]; then
     if [[ ! $(command -v k9s) ]]; then
         export PATH_K9S=/opt/k9s-0.27.3
