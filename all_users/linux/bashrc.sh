@@ -105,6 +105,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+PATH_ASDF_SHIMS="$HOME/.asdf/shims"
+[[ -d "$PATH_ASDF_SHIMS" ]] && export PATH=$PATH:$PATH_ASDF_SHIMS
+
 # SETUP REQUIRED SOFTWARE IN LINUX (except GitHub Codespaces)
 if [[ "${CODESPACES:-""}" != "true" ]]; then
     if [[ ! $(command -v k9s) ]]; then
