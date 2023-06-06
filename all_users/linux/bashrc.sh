@@ -108,7 +108,7 @@ fi
 PATH_ASDF_SHIMS="$HOME/.asdf/shims"
 [[ -d "$PATH_ASDF_SHIMS" ]] && export PATH=$PATH:$PATH_ASDF_SHIMS
 
-PATH_DOTNET_TOOLS="~/.dotnet/tools"
+PATH_DOTNET_TOOLS="$HOME/.dotnet/tools"
 export PATH=$PATH:$PATH_DOTNET_TOOLS
 
 # SETUP REQUIRED SOFTWARE IN LINUX (except GitHub Codespaces)
