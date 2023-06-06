@@ -108,6 +108,9 @@ fi
 PATH_ASDF_SHIMS="$HOME/.asdf/shims"
 [[ -d "$PATH_ASDF_SHIMS" ]] && export PATH=$PATH:$PATH_ASDF_SHIMS
 
+PATH_DOTNET_TOOLS="~/.dotnet/tools"
+export PATH=$PATH:$PATH_DOTNET_TOOLS
+
 # SETUP REQUIRED SOFTWARE IN LINUX (except GitHub Codespaces)
 if [[ "${CODESPACES:-""}" != "true" ]]; then
     if [[ ! $(command -v k9s) ]]; then
