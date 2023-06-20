@@ -9,7 +9,12 @@ DOTFILES_REPO_ROOT=$(realpath $SCRIPT_DIR/../../)
 
 pushd $DOTFILES_REPO_ROOT
 
-$DOTFILES_REPO_ROOT/all_users/all_OSs/on_user_login.sh
+source $DOTFILES_REPO_ROOT/all_users/all_OSs/on_user_login.sh
+
+if [[ $IS_MAC == true ]]; then
+    $DOTFILES_REPO_ROOT/all_users/mac/install.sh
+    $DOTFILES_REPO_ROOT/all_users/all_OSs/on_user_login.sh
+fi
 
 if [[ -f ~/.bashrc ]]; then
     if [[ ! -f ~/.bashrc.bck ]]; then
@@ -23,7 +28,6 @@ echo "# Dynamically generated bashrc from dotfiles" > ~/.bashrc && echo -e "\n\n
 cat $DOTFILES_REPO_ROOT/all_users/all_OSs/bashrc.sh >> ~/.bashrc && echo -e "\n\n\n" >> ~/.bashrc
 cat $DOTFILES_REPO_ROOT/all_users/linux/bashrc.sh >> ~/.bashrc && echo -e "\n\n\n" >> ~/.bashrc
 cat $DOTFILES_REPO_ROOT/anomalo/all_OSs/bashrc.sh >> ~/.bashrc && echo -e "\n\n\n" >> ~/.bashrc
-cat $DOTFILES_REPO_ROOT/anomalo/linux/bashrc.sh >> ~/.bashrc && echo -e "\n\n\n" >> ~/.bashrc
 
 # git config
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

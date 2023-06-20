@@ -1,5 +1,7 @@
 # BASHRC FOR ANOMALO, ALL OSs
 
+export PATH=$PATH:~/.local_path
+
 export CONTEXT_DEV="arn:aws:eks:us-west-2:580663733917:cluster/anomalo-staging"
 export CONTEXT_STAGING="arn:aws:eks:us-west-1:580663733917:cluster/anomalo-staging-us-west-1"
 export CONTEXT_PROD="arn:aws:eks:us-west-1:580663733917:cluster/anomalo-production-us-west-1"
