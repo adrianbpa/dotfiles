@@ -13,7 +13,7 @@ echo "Dotfiles repo root: $DOTFILES_REPO_ROOT"
 
 pushd $DOTFILES_REPO_ROOT
 
-$DOTFILES_REPO_ROOT/anomalo/linux/on_user_login.sh
+$DOTFILES_REPO_ROOT/anomalo/all_OSs/on_user_login.sh
 
 # Install .NET 7
 # wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
