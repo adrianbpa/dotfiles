@@ -24,6 +24,7 @@ export DOTFILES_REPO_ROOT="/workspaces/.codespaces/.persistedshare/dotfiles"
 [[ ! -d "${DOTFILES_REPO_ROOT}" && -d ~/repos/dotfiles ]] && export DOTFILES_REPO_ROOT="$(realpath ~/repos/dotfiles)"
 [[ ! -d "${DOTFILES_REPO_ROOT}" ]] && export DOTFILES_REPO_ROOT="$(realpath ~/.adrianbpa.dotfiles)"
 
+[[ -d "${HOME}/.asdf/bin" ]] && export PATH="${PATH}:${HOME}/.asdf/bin"
 [[ -d "${HOME}/.asdf/shims" ]] && export PATH="${PATH}:${HOME}/.asdf/shims"
 
 source "${DOTFILES_REPO_ROOT}/all_users/all_OSs/git-completion.bash"
